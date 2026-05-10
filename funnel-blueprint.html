@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Funnel Blueprint · For Amber · AG1</title>
+<meta name="description" content="Funnel Blueprint - built for Amber Lyon by AG1 Consulting.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Funnel Blueprint · For Amber">
+<meta property="og:description" content="Part of the funnel audit + less-than-7-day install plan built for @modernmind___ by AG1 Consulting.">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<script defer data-domain="andrei170.github.io" src="https://plausible.io/js/script.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="docs.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-back"><span class="arrow">&larr;</span> Back to Hub</a>
+    <span class="nav-title">For Amber · AG1</span>
+  </div>
+</nav>
+
+<article class="doc">
+  <header class="doc-header">
+    <span class="doc-tag">Architecture</span>
+    <h1>Funnel Blueprint - Amber Lyon</h1>
+  </header>
+
+  
+<p><strong>Architecture deliverable</strong> · Current state map, target state map, phase mapping, tech stack, integration points.</p>
+<hr />
+<h2>Current State (annotated)</h2>
+<pre><code>ENTRY POINTS
+├── @modernmind___ IG (269K) ─────────────────────────┐
+├── X @modernmind___ ─────────────────────────────────┤
+├── Modern Mind Podcast (Apple + Spotify) ────────────┤
+├── &quot;You Are a Magnet&quot; book (Amazon, June 2024) ─────┤
+└── Self FM / RADIATE app (self-fm.mvt.so) ──────────┘
+                              ↓
+                    LINKTREE (linktr.ee/modernmind___)
+                    9-link buffet · no hierarchy · funnel-killer
+                              ↓
+            ┌────────┬────────┼────────┬────────┐
+            ↓        ↓        ↓        ↓        ↓
+         Portal   Book    Podcast    App     1-to-1 (CAPACITY)
+        ($189/mo)         (free)            waitlist for May
+
+GAPS:
+- No quiz / segmentation entry
+- No productised group DWY tier
+- Executive Coaching waitlist has no monetised path
+- Book buyer routes to Amazon · no nurture into Portal
+- IG bio click → email subscriber rate decays at this size of list
+</code></pre>
+<h2>Target State (annotated)</h2>
+<pre><code>ENTRY POINTS
+├── @modernmind___ IG (269K) ─────────────────────────┐
+├── X @modernmind___ ─────────────────────────────────┤
+├── Modern Mind Podcast (CTA segment added per ep) ──┤
+├── &quot;You Are a Magnet&quot; book (Amazon + free chapter) ┤
+└── Self FM / RADIATE app ────────────────────────────┘
+                              ↓
+              modernmind.earth/start (CUSTOM BIO FUNNEL)
+              Replaces Linktree · ONE primary CTA above the fold
+                              ↓
+         ┌──── MAGNETIC ARCHETYPE QUIZ ────┐
+         │     (Typeform · 7q · 90 sec)     │
+         │     Returns 1 of 5 archetypes     │
+         │     Captures email + segments    │
+         └────────────────┬─────────────────┘
+                          ↓
+              ┌───────────┼───────────┐
+              ↓           ↓           ↓
+        Archetype A  Archetype B  Archetype C/D/E
+       (Cohort-fit) (Portal-fit) (Book + Reset + Podcast pool)
+              ↓           ↓           ↓
+       MAGNETIC      THE PORTAL   8-TOUCH NURTURE
+       METHOD        ($189/mo)    (Welcome flow, 30 days)
+       COHORT        Skool                ↓
+       ($5K-$10K     existing      Routes to Portal trial
+       8-week)                     or back-of-funnel content
+              ↓                            ↓
+       COHORT NURTURE                Book → Portal nurture
+       Implementation                (8 touches, chapter-mapped)
+       accountability                          ↓
+              ↓                          PORTAL TRIAL
+       1-TO-1 WAITLIST
+       (existing path · now feeds from cohort, not cold)
+
+PARALLEL TRACK
+&quot;You Are a Magnet&quot; Book Buyer → 30-day chapter-mapped sequence
+                                → Portal trial offer at touch 8
+</code></pre>
+<h2>Phase Mapping</h2>
+<table>
+<thead>
+<tr>
+<th>Asset</th>
+<th>Phase</th>
+<th>Owner</th>
+<th>Tool</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Magnetic Method Cohort landing page</td>
+<td>1</td>
+<td>AG1</td>
+<td>Custom HTML (Squarespace-compatible) or Webflow</td>
+</tr>
+<tr>
+<td>VSL hero asset</td>
+<td>1</td>
+<td>AG1 + Amber</td>
+<td>Wistia + Riverside</td>
+</tr>
+<tr>
+<td>Stripe + payment + email auto-trigger</td>
+<td>1</td>
+<td>AG1</td>
+<td>Stripe + Kit / ConvertKit</td>
+</tr>
+<tr>
+<td>Pixel + GA4 + retargeting tags</td>
+<td>1</td>
+<td>AG1</td>
+<td>Meta Pixel + GA4 + GTM</td>
+</tr>
+<tr>
+<td>Custom bio site (modernmind.earth/start)</td>
+<td>2</td>
+<td>AG1</td>
+<td>Custom one-pager on Squarespace subdomain or static deploy</td>
+</tr>
+<tr>
+<td>Magnetic Archetype quiz</td>
+<td>2</td>
+<td>AG1</td>
+<td>Typeform (preferred) or ScoreApp</td>
+</tr>
+<tr>
+<td>8-touch welcome nurture</td>
+<td>2</td>
+<td>AG1</td>
+<td>Kit / ConvertKit</td>
+</tr>
+<tr>
+<td>Book → Portal 30-day sequence</td>
+<td>2</td>
+<td>AG1</td>
+<td>Kit / ConvertKit</td>
+</tr>
+<tr>
+<td>Cohort onboarding Skool / private chat</td>
+<td>2</td>
+<td>AG1 + Amber</td>
+<td>Skool (existing Portal infra)</td>
+</tr>
+<tr>
+<td>Photoshoot + B-roll</td>
+<td>3</td>
+<td>AG1 + photographer</td>
+<td>NZ studio + outdoor</td>
+</tr>
+<tr>
+<td>Hook bank + content calendar</td>
+<td>3</td>
+<td>AG1 + Amber</td>
+<td>Notion + Frame.io</td>
+</tr>
+<tr>
+<td>Podcast CTA segment + foundations series</td>
+<td>3</td>
+<td>AG1 + Amber</td>
+<td>Riverside + existing podcast feed</td>
+</tr>
+<tr>
+<td>Meta + Pinterest ads</td>
+<td>4</td>
+<td>AG1</td>
+<td>Meta Ads Manager + Pinterest Ads</td>
+</tr>
+<tr>
+<td>Retargeting campaigns</td>
+<td>4</td>
+<td>AG1</td>
+<td>Meta + GTM</td>
+</tr>
+<tr>
+<td>Lookalike audiences</td>
+<td>4</td>
+<td>AG1</td>
+<td>Meta CAPI + audience builder</td>
+</tr>
+</tbody>
+</table>
+<h2>Tech Stack (recommended, swappable)</h2>
+<ul>
+<li><strong>CMS / brand site:</strong> Squarespace (existing) - keep modernmind.earth on Squarespace, deploy bio funnel as a sub-page or subdomain</li>
+<li><strong>Cohort landing:</strong> Custom HTML deployed to a sub-page or Webflow if more design control needed</li>
+<li><strong>Email:</strong> Kit / ConvertKit (preferred for creator audiences) - clean API for quiz integration</li>
+<li><strong>Quiz:</strong> Typeform (preferred for the soft-feminine UX) or ScoreApp if scoring math gets complex</li>
+<li><strong>Payment:</strong> Stripe (cohort) - existing Whop / Skool stays for Portal subscription</li>
+<li><strong>Course / membership host:</strong> Skool (existing for The Portal) - cohort runs as a private Skool group within or alongside the Portal</li>
+<li><strong>Video host:</strong> Wistia (cohort + VSL) + YouTube (long-form podcast) + Loom (1-to-1 personal video reviews if she keeps premium tier)</li>
+<li><strong>Analytics:</strong> GA4 + Meta Pixel + Microsoft Clarity (heatmaps) + Pinterest Tag (wellness audience)</li>
+<li><strong>CRM:</strong> Kit segmentation (light) - GHL only if outreach/sales pipeline grows</li>
+<li><strong>Scheduling:</strong> Calendly (default) or Cal.com</li>
+<li><strong>Project / build:</strong> Notion (handover-friendly)</li>
+</ul>
+<h2>Integration Points</h2>
+<ol>
+<li>Quiz → Email · Typeform triggers Kit on completion with archetype tag</li>
+<li>Email → Cohort apply · Kit triggers Stripe checkout link for archetype-A path</li>
+<li>Email → Portal trial · Kit hands archetype-B subscribers to Skool trial offer</li>
+<li>Book purchase → Email · Amazon affiliate / book funnel form captures email pre-Amazon-click; post-purchase confirmation unlocks chapter-mapped sequence</li>
+<li>All events → GA4 + Meta Pixel via GTM · captures full funnel attribution</li>
+<li>Podcast CTA segment → modernmind.earth/start · standardised end-of-episode CTA tracked via UTM</li>
+</ol>
+<h2>Owner Map</h2>
+<ul>
+<li><strong>Amber:</strong> filming (VSL + photoshoot day), live cohort calls (1 per week x 8 weeks per cohort), monthly podcast CTA segment, top-line decisions on copy + brand</li>
+<li><strong>AG1 (Andrei):</strong> everything else - landing page build, email writing, quiz build, automation setup, content production cycles, ads management once Phase 4 activates, weekly reporting</li>
+</ul>
+<h2>Failure Modes + Mitigations</h2>
+<ul>
+<li><strong>VSL filming delay (Amber NZ-based, time zone reality)</strong> → use existing Modern Mind Podcast audio + soft B-roll as the Phase 1 stand-in; replace with custom VSL by end of Phase 1</li>
+<li><strong>Book funnel pre-Amazon capture friction</strong> → start with post-purchase trigger only (book buyer email captured at Amazon order ID lookup or via "register your book" landing page); pre-Amazon capture is a Phase 2.5 enhancement</li>
+<li><strong>Cohort fill rate dependency on waitlist size</strong> → pre-launch warm waitlist via existing Executive Coaching list before opening to broader IG audience; soft launch to 20 seats first to validate</li>
+<li><strong>Squarespace + custom subdomain integration</strong> → if Squarespace constraints block sub-page deploy, host bio funnel at modernmind.earth/start as a separate static site behind a CNAME; functional, no SEO penalty</li>
+</ul>
+<h2>KPIs (90-day)</h2>
+<ul>
+<li>Phase 1 · Magnetic Method Cohort landing live · 20-40 seats filled in first cohort</li>
+<li>Phase 2 · 1,000+ quiz completions · 8-15% IG-bio-click → email conversion</li>
+<li>Phase 3 · 40+ short-form posts shipped · 4 long-form podcast episodes published with CTA segment live</li>
+<li>Phase 4 · Meta CPL under $35 (wellness-niche benchmark) · ROAS 3x by week 12</li>
+<li>Year-1 floor target · $315-720K incremental on top of existing Portal, book, app, and Executive Coaching revenue</li>
+</ul>
+
+  <footer class="doc-footer">
+    <a href="index.html" class="doc-footer-link">Back to Hub</a>
+    <div class="doc-meta">Prepared 2026-05-10 &middot; Built for @modernmind___</div>
+  </footer>
+</article>
+
+</body>
+</html>
